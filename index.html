@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.js"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600');
+  *{
+    margin:0;
+    padding:0;
+  }
+  html,
+  body{
+     height: 100%;
+     padding: 0;
+     scroll-behavior: smooth;
+     background: #f7f5f2;
+     color: #666;
+     font-family: 'Open Sans', sans-serif;
+     font-weight: 300;
+  }
+  h2{
+    line-height: 1.25;
+    padding-top: 45px;
+    font-weight: 300;
+  }
+  svg{
+    padding: 20px;
+  }
+  text{
+    font-size: 10px;
+  }
+  strong{
+    font-weight: 600;
+  }
+  #graphic {
+    max-width:  1440px;
+    width: 100%;
+    position:   relative;
+    height:  100%;
+    position:  relative;
+    margin:auto;
+  }
+  .container {
+    height: 200%;
+    max-width: 640px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    height: 175%;
+    line-height: 1.5;
+    left: 500px;
+  }
+  .container div {
+    height: 100%;
+    display: block;
+    padding: 0 45px;
+  }
+  .fixed {
+    position: fixed;
+    max-width: 500px;
+    height: 500px;
+    top: 50px;
+  }
+  </style>
+</head>
+
+<body>
+  <div id="graphic">
+  <div class="container">
+    <div id="div1">
+      <h1><b>Una empresa Docente</b></h1>
+      <br><h2>
+    </h2>Hace parte de la facultad de Educación de la Universidad de Los Andes, enfocada en la Educación Matemática y utiliza herramientas como el canal de YouTube para realizar difusión de conocimiento en matemáticas, contribuyendo a la formación e investigación en dicha área.
+        La publicación de contenido por medio del canal, se encuentra centrada en tres esquemas de difusión de conocimiento: comunicaciones de innovación curricular, conferencias de investigación y presentaciones de la Maestría en Educación Matemática de la Universidad de los Andes.</h2>
+        <h2><strong>Miembros</strong></h2>
+        </h4>Profesores, estudiantes y exalumnos (maestría y doctorado), Gemad.</h4>
+        <h2><strong>Objetivos</strong></h2>
+        </h4>
+            -	Mejorar el desempeño del uso del canal.<br>
+            -	Aumentar la difusión del contenido ofrecido por el canal.<br>
+            -	Crear contenido de acuerdo a la audiencia.
+        </h4>
+    </div>
+    <div id="div2">
+      <h2><strong>¿Cuales son las etiquetas mas visualizadas por esquema de difusión para un rango de fechas?</strong></h2>
+        <br>
+      </h3>Identificar las etiquetas que mas se visualizan para los esquemas de difusión disponibles filtrando por fecha:</h3>
+      <div class='tableauPlaceholder' id='viz1575756681615' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;En&#47;EntregaFinalObjetivo3_20191207&#47;Objetivo3_&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='EntregaFinalObjetivo3_20191207&#47;Objetivo3_' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;En&#47;EntregaFinalObjetivo3_20191207&#47;Objetivo3_&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1575756681615');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='800px';vizElement.style.height='627px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='800px';vizElement.style.height='627px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </div>
+    <div id="div5">
+      <h4><strong>¿Cuál es la tendencia en el tiempo de las vistas por día de los videos una vez ya han sido publicados para cada esquema de difusión?</strong>
+        <br>
+      </h5>Se Presenta una distribución con las cantidades diarias de vistas totales de todo el canal, la línea de tendencia por días para las vistas de videos que ya se publicaron
+          y la distribución por días de la cantidad de videos publicados que se hayan seleccionado sobre las lineas de cada esquema de difusión.</h5>
+      <br>
+      <div class='tableauPlaceholder' id='viz1575756786800' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;En&#47;EntregaFinal_20191207_PublishedAt&#47;Obj2_DD&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='EntregaFinal_20191207_PublishedAt&#47;Obj2_DD' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;En&#47;EntregaFinal_20191207_PublishedAt&#47;Obj2_DD&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1575756786800');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='800px';vizElement.style.height='627px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='800px';vizElement.style.height='627px';} else { vizElement.style.width='100%';vizElement.style.height='927px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </div>
+    <div id="div6">
+      <h4><strong>¿Cuál es la comparación de los valores promedios de comentarios, me gusta, videos compartidos, visualizaciones de los diferentes esquemas de difusión para un rango de fechas seleccionado?</strong>
+        <br>
+      </h5>Se representa cada esquema con un rombo y se utiliza un color para identificar la característica a diferenciar.</h5>
+      <br>
+      </h4><strong>¿Comparación del promedio de vistas vs el promedio de la longitud de los títulos para cada esquema de difusión?</strong>
+        <br>
+      </h5>El objetivo es observar la correlación entre las vistas y la longitud de los titulos para encontrar las diferencias para cada esquema de difusión</h5>
+      <div class='tableauPlaceholder' id='viz1575756838801' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;En&#47;EntregaFinal_20191207_comparison&#47;Obj_Comparison&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='EntregaFinal_20191207_comparison&#47;Obj_Comparison' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;En&#47;EntregaFinal_20191207_comparison&#47;Obj_Comparison&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1575756838801');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='850px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='850px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='1027px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </div>
+    <div id="div7">
+      <h2><strong>¿Cuál es la cantidad de subscriptores ganados del canal por video para cada esquema de difusión?</strong>
+        <br>
+      </h4>Se resume por cada año y para cada mes la cantidad de subscriptores que empiezan a seguir el canal.</h4>
+        <div class='tableauPlaceholder' id='viz1575757008052' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;En&#47;EntregaFinal_20191207_Suscribers&#47;Obj3_Subscribers&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='EntregaFinal_20191207_Suscribers&#47;Obj3_Subscribers' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;En&#47;EntregaFinal_20191207_Suscribers&#47;Obj3_Subscribers&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1575757008052');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='527px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='527px';} else { vizElement.style.width='100%';vizElement.style.height='600px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </div>
+    <div id="div8">
+      <h2><strong>¿Cuál es la cantidad de videos de cada esquema de difusión?</strong>
+        <br>
+      </h4>Las barras muestran los totales de videos que hacen parte de cada esquema de difusión.</h4>
+      <br>
+      <h2><strong>¿Cuáles son los detalles de los videos vistos de un esquema de difusión seleccionado?</strong>
+        <br>
+      </h4>Una vez seleccionado el esquema de difusión se muestra el detalle de las cantidades que corresponden a las características de videos .</h4>
+        <div class='tableauPlaceholder' id='viz1575757102448' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Z8&#47;Z8JW8T9H4&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;Z8JW8T9H4' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Z8&#47;Z8JW8T9H4&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1575757102448');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='550px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='500px';} else { vizElement.style.width='100%';vizElement.style.height='527px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </div>
+
+  </div>
+
+
+  <!-- svg -->
+  <div class="fixed"><svg id="viz" width="100%" height="100%"></svg></div>
+
+</div><!-- /graphic -->
+
+
+  <script>
+
+		//svg
+    let svg = d3.select("svg");
+
+
+    //svg width and height
+    svg.attr('width',100)
+        .attr('height',500)
+
+
+    //set up grid spacing
+    let spacing = 20;
+    let rows = 5;
+    let column = 10;
+    let randnum = (min,max) => Math.round( Math.random() * (max-min) + min );
+
+    //Create an array of objects
+    let our_data = d3.range(20).map(i =>
+    ({ 'device': i < 5 ? 'ios' : 'android',
+        'city': i < 3 ? 'San Diegan' : 'Out of towners',
+        'age': randnum(25, 65)
+    }));
+
+
+    //create group and join our data to that group
+    let group = svg.selectAll('g')
+      .data(our_data)
+      .enter()
+      .append("g")
+
+
+    //create rectangles
+    let rects = group.append("rect")
+
+
+    //city data
+    d3.selectAll('g')
+      .append("text")
+      .text( (d) => d["city"])
+      .attr("fill", "gray")
+      .attr("class", "city")
+      .attr("dx", -500)
+
+
+
+    //age data
+    d3.selectAll('g')
+      .append("text")
+      .text( (d) => d["age"] )
+      .attr("fill", "#fff")
+      .attr("class", "age")
+      .attr("dx", -500)
+
+
+    // square grid
+    let grid = () =>{
+      rects
+        .transition()
+        .delay((d, i) => 10 * i)
+        .duration(600)
+        .ease("elastic")
+        .attr("width", 20)
+        .attr("height", 20)
+        .attr("rx", 5)
+        .attr("ry", 5)
+        .attr("x", (d, i) => i % column * spacing)
+        .attr("y", (d, i) => Math.floor(i / 10) % rows * spacing)
+        .attr("fill", (d, i) => (i < 40 ? "#394147" : "#99c125"))
+        .attr("opacity", "1")
+    }
+
+
+
+    //circle grid
+    let grid2 = () =>{
+      rects
+        .transition()
+        .delay((d, i) => 10 * i)
+        .duration(600)
+        .ease("elastic")
+        .attr("width", 20)
+        .attr("height", 20)
+        .attr("rx", "50%")
+        .attr("ry", "50%")
+        .attr("x", (d, i) => i % column * spacing)
+        .attr("y", (d, i) => Math.floor(i / 10) % rows * spacing)
+        .attr("fill", (d, i) => (i < 8 ? "none" : "#99c125"))
+    }
+
+
+    //divide
+    let divide = () =>{
+      rects
+        .transition()
+        .delay((d, i) => 10 * i)
+        .duration(600)
+        .ease("elastic")
+        .attr("width", 10)
+        .attr("height", 10)
+        .attr("rx", 0)
+        .attr("ry", 0)
+        .attr("x", (d, i) => d['device'] == "ios" ? randnum(100, 150) :  randnum(300, 350))
+        .attr("y", (d, i) => i * 20)
+        .attr("fill", (d, i) => d['device'] == "ios" ? "#394147": "#99c125")
+        .attr("opacity", (d,i)=> i < 12 ? 1 : 0 )//only show 12 people
+    }
+
+    let divide0 = () =>{
+      rects
+        .transition()
+        .delay((d, i) => 10 * i)
+        .duration(600)
+        .ease("elastic")
+        .attr("width", 1)
+        .attr("height", 1)
+        .attr("rx", 0)
+        .attr("ry", 0)
+        .attr("x", (d, i) => d['device'] == "ios" ? randnum(100, 150) :  randnum(300, 350))
+        .attr("y", (d, i) => i * 20)
+        .attr("fill", (d, i) => d['device'] == "ios" ? "#394147": "#99c125")
+        .attr("opacity", (d,i)=> i < 12 ? 1 : 0 )//only show 12 people
+
+    }
+
+    //waypoints scroll constructor
+    function scroll(n, offset, func1, func2){
+      return new Waypoint({
+        element: document.getElementById(n),
+        handler: function(direction) {
+           direction == 'down' ? func1() : func2();
+        },
+        //start 75% from the top of the div
+        offset: offset
+      });
+    };
+
+    //triger these functions on page scroll
+    new scroll('div2', '75%', grid2, grid);
+    new scroll('div3', '75%', grid2, grid);
+    new scroll('div4', '75%', divide, grid);
+    new scroll('div5', '75%', divide, grid);
+    new scroll('div6', '75%', grid2, grid);
+    new scroll('div7', '75%', grid2, grid);
+    new scroll('div8', '75%', divide, grid);
+
+    //start grid on page load
+    grid();
+
+
+  </script>
+</body>
